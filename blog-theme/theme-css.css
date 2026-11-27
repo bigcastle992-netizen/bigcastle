@@ -45,3 +45,24 @@ a:hover{color:var(--terra-dark)}
 .bc-photo{margin:1.5em 0;text-align:center}
 .bc-photo figcaption{color:var(--muted);font-size:13px;margin-top:6px}
 @media(max-width:600px){.bc-info th{width:70px}}
+
+/* ===== 사이드바·링크 보정 ===== */
+.sidebar-container,.sidebar-container .sidebar_bottom,.sidebar-container .sidebar_top_wrapper,.sidebar-container .navigation,.sidebar-container .sidebar_top{background:var(--paper)!important;background-color:var(--paper)!important;background-image:none!important}
+.sidebar-container .sidebar_top_wrapper{border-bottom:1px dashed var(--sand)}
+.sidebar-container .widget,.sidebar-container .widget li,.sidebar-container .widget a{color:var(--ink)}
+.sidebar-container .widget a:hover{color:var(--terra)}
+.sidebar-container .widget .title,.sidebar-container .widget h2{color:var(--terra)!important}
+.sidebar-container .widget+.widget{border-top:1px dashed var(--sand)!important}
+.widget.Profile h3.title,.widget.Profile .profile-name,.widget.Profile .profile-link{color:var(--ink)}
+.widget.Profile .profile-link,.widget.Profile .profile-link.visit-profile{color:var(--terra)!important;border-color:var(--terra)!important;border-radius:999px}
+.widget.Profile .profile-link:hover,.widget.Profile .profile-link.visit-profile:hover{background:var(--terra)!important;color:#fff!important}
+.widget.Profile .default-avatar-wrapper .avatar-icon{border-color:var(--sand)!important;fill:var(--terra)!important}
+.Label li a,.Label .label-count,.BlogArchive a,.BlogArchive .post-count{color:var(--terra-dark)!important}
+.Attribution,.Attribution a,.Attribution a:visited,.Attribution .copyright,.Attribution .image-attribution,.Attribution .image-attribution a{color:var(--muted)!important}
+.Attribution a:hover{color:var(--terra)!important}
+.Attribution svg{fill:var(--terra)!important}
+.pill-button,.extendable .show-more,.extendable .show-less{color:var(--terra)!important;border-color:var(--terra)!important}
+.blog-pager a,.blog-pager a:visited{color:var(--terra)!important}
+.page_body{background:var(--cream)}
+.svg-icon-24,.sidebar-container .svg-icon-24{fill:var(--terra)}
+.centered-top-container .svg-icon-24{fill:#fff}
