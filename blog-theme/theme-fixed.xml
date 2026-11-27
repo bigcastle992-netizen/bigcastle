@@ -2723,6 +2723,47 @@ a:hover{color:var(--terra-dark)}
 .centered-top-container .svg-icon-24{fill:#fff}
 .ReportAbuse a,.ReportAbuse a:visited,.sidebar-container .ReportAbuse a{color:var(--muted)!important}
 .ReportAbuse a:hover{color:var(--terra)!important}
+
+/* ===== 디자인 업그레이드: 헤더 · 프로필 · 사이드바 ===== */
+/* 헤더: 은은한 빛무리 + 하단 물결 + 한 줄 소개 */
+.bg-photo{background:radial-gradient(circle at 18% 22%,rgba(255,255,255,.22),transparent 42%),radial-gradient(circle at 82% 68%,rgba(255,236,220,.28),transparent 46%),linear-gradient(135deg,#B5432C 0%,#D9805F 55%,#EDB896 100%)!important}
+.bg-photo-container::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:64px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%23FAF6F0' d='M0 70c240 50 480 50 720 20s480-60 720-10v60H0z'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat}
+.Header h1{text-shadow:0 2px 14px rgba(90,30,15,.25)}
+.Header h1::after{content:"가고 싶은 곳 · 먹고 싶은 곳, 정보냥이의 맛집 & 여행 기록";display:block;margin-top:10px;font:500 15px/1.5 'Noto Sans KR',sans-serif;letter-spacing:0;color:#FFF3EA;text-shadow:none;opacity:.95}
+.item-view .Header h1::after,.sticky .Header h1::after{display:none}
+.tabs li a,.blog-name .PageList a{font-weight:700;letter-spacing:.02em;border-radius:999px;padding:8px 18px;transition:background .2s}
+.blog-name .PageList a:hover,.tabs li a:hover{background:rgba(255,255,255,.18)}
+.tabs .selected{border-bottom:0}
+.tabs .selected a{background:rgba(255,255,255,.26)}
+
+/* 프로필: 고양이 아바타 + 카드 */
+.sidebar-container .sidebar_top_wrapper{padding:28px 16px 18px;text-align:center}
+.widget.Profile .default-avatar-wrapper .avatar-icon{display:none!important}
+.widget.Profile .individual .default-avatar-wrapper{width:112px;height:112px;margin:0 auto 4px;border-radius:50%;background:linear-gradient(135deg,#E9A48A,#C8553D);box-shadow:0 6px 18px rgba(200,85,61,.28);display:flex;align-items:center;justify-content:center}
+.widget.Profile .individual .default-avatar-wrapper::before{content:"🐱";font-size:58px;line-height:1}
+.widget.Profile .individual .profile-img{border-radius:50%;border:4px solid #fff;box-shadow:0 6px 18px rgba(120,80,50,.2);object-fit:cover}
+.widget.Profile .profile-name{font-family:'Noto Serif KR',serif;font-weight:700;font-size:18px;color:var(--ink)!important}
+.widget.Profile .individual .profile-link{align-items:center}
+.widget.Profile .profile-link.visit-profile{margin-top:10px;padding:6px 16px;font-size:12px;border:1px solid var(--terra);display:inline-block;width:auto}
+.widget.Profile .profile-textblock{color:var(--muted);font-size:13px;line-height:1.7}
+
+/* 사이드바: 카테고리 목록 */
+.sidebar-container .widget{margin:0 14px;padding:18px 4px}
+.sidebar-container .widget .title,.sidebar-container .widget h2.title{font-family:'Noto Serif KR',serif;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.Label details>summary{list-style:none}
+.Label details>summary .chevron-up,.Label details>summary .chevron-down{display:none!important}
+.Label .widget-content ul{list-style:none;margin:6px 0 0;padding:0}
+.Label li{margin:0;padding:0;border-radius:12px;transition:background .2s}
+.Label li:hover{background:#FDF1EC}
+.Label li a{display:block;padding:11px 12px;font-weight:500;font-size:15px;color:var(--ink)!important;text-decoration:none!important}
+.Label li a:hover{color:var(--terra)!important}
+.Label .label-count{float:right;margin:11px 12px 0 0;font-size:12px;color:var(--terra-dark)!important;background:var(--sand);border-radius:999px;padding:1px 9px;line-height:1.6}
+.Label .label-count::before,.Label .label-count::after{content:none}
+.Label li a[href*="label/맛집"]::before,.Label li a[href*="label/%EB%A7%9B%EC%A7%91"]::before{content:"🍽  "}
+.Label li a[href*="label/여행"]::before,.Label li a[href*="label/%EC%97%AC%ED%96%89"]::before{content:"🧳  "}
+.Label li:has(a[href*="label/나는솔로"]),.Label li:has(a[href*="label/%EB%82%98%EB%8A%94%EC%86%94%EB%A1%9C"]){display:none}
+.BlogArchive{display:none}
+.sidebar-container .widget.ReportAbuse{padding-top:6px}
 ]]></b:skin>
 
     <b:template-skin>
@@ -4043,7 +4084,7 @@ a:hover{color:var(--terra-dark)}
         </b:section>
       </div>
       <b:section class='sidebar_bottom' id='sidebar_bottom' name='Sidebar (Bottom)' preferred='yes'>
-        <b:widget id='BlogArchive1' locked='false' title='' type='BlogArchive' visible='true'>
+        <b:widget id='BlogArchive1' locked='false' title='' type='BlogArchive' visible='false'>
           <b:widget-settings>
             <b:widget-setting name='showStyle'>FLAT</b:widget-setting>
             <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -4109,17 +4150,16 @@ a:hover{color:var(--terra-dark)}
   </ul>
 </b:includable>
         </b:widget>
-        <b:widget id='Label1' locked='false' title='태그' type='Label' visible='true'>
+        <b:widget id='Label1' locked='false' title='카테고리' type='Label' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
             <b:widget-setting name='display'>LIST</b:widget-setting>
             <b:widget-setting name='selectedLabelsList'/>
             <b:widget-setting name='showType'>ALL</b:widget-setting>
-            <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main' var='this'>
-          <details class='collapsible extendable'>
-            <b:attr cond='data:view.isLabelSearch' name='open' value='open'/>
+          <details class='collapsible extendable' open='open'>
             <b:with value='true' var='renderAsDetails'>
             <b:with value='data:messages.labels' var='defaultTitle'>
               <b:include name='super.main'/>
