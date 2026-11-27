@@ -2719,9 +2719,10 @@ a:hover{color:var(--terra-dark)}
 .Attribution svg{fill:var(--terra)!important}
 .pill-button,.extendable .show-more,.extendable .show-less{color:var(--terra)!important;border-color:var(--terra)!important}
 .blog-pager a,.blog-pager a:visited{color:var(--terra)!important}
-.page_body{background:var(--cream)}
 .svg-icon-24,.sidebar-container .svg-icon-24{fill:var(--terra)}
 .centered-top-container .svg-icon-24{fill:#fff}
+.ReportAbuse a,.ReportAbuse a:visited,.sidebar-container .ReportAbuse a{color:var(--muted)!important}
+.ReportAbuse a:hover{color:var(--terra)!important}
 ]]></b:skin>
 
     <b:template-skin>
