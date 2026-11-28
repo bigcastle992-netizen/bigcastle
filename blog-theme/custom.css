@@ -1,0 +1,57 @@
+/* 맛집·여행 블로그 커스텀 CSS — 크림 × 테라코타
+   적용: Blogger 관리 > 테마 > 맞춤설정 > 고급 > CSS 추가 (Contempo 테마 기준) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root{
+  --cream:#FAF6F0; --paper:#FFFDF9; --sand:#EFE6DA;
+  --terra:#C8553D; --terra-dark:#A4422E; --ink:#3A2F2A; --muted:#8A7B70;
+}
+
+body{ background:var(--cream)!important; color:var(--ink); font-family:'Noto Sans KR',sans-serif; line-height:1.85; }
+a{ color:var(--terra); text-decoration:none; }
+a:hover{ color:var(--terra-dark); text-decoration:underline; }
+
+/* 헤더 */
+.header-inner .Header h1, .Header h1.title, .Header .title a{
+  font-family:'Noto Serif KR',serif!important; color:var(--terra)!important; letter-spacing:-.02em;
+}
+.Header .description{ color:var(--muted); }
+
+/* 탭 메뉴 */
+.tabs-inner .widget ul{ background:transparent!important; border-bottom:2px solid var(--sand); }
+.tabs-inner .widget li a{ color:var(--ink)!important; font-weight:500; border:0!important; }
+.tabs-inner .widget li a:hover,.tabs-inner .widget li.selected a{ color:var(--terra)!important; background:transparent!important; box-shadow:inset 0 -3px 0 var(--terra); }
+
+/* 글 카드 */
+.post-outer{ background:var(--paper); border:1px solid var(--sand); border-radius:14px; padding:22px 24px; margin-bottom:28px; box-shadow:0 2px 10px rgba(120,80,50,.06); }
+.post-title, .post-title a{ font-family:'Noto Serif KR',serif!important; color:var(--ink)!important; letter-spacing:-.02em; }
+.post-title a:hover{ color:var(--terra)!important; }
+.post-body{ font-size:16.5px; }
+.post-body img{ border-radius:12px; max-width:100%; height:auto; }
+.post-body h2,.post-body h3{ font-family:'Noto Serif KR',serif; color:var(--terra-dark); border-left:5px solid var(--terra); padding-left:12px; margin:2em 0 .8em; }
+.post-body blockquote{ background:var(--sand); border-left:4px solid var(--terra); margin:1.5em 0; padding:14px 18px; border-radius:0 10px 10px 0; font-style:normal; }
+.post-header,.post-footer{ color:var(--muted); font-size:13px; }
+.post-labels a{ background:var(--sand); color:var(--terra-dark); padding:2px 10px; border-radius:999px; font-size:12px; }
+.jump-link a, a.more-link{ background:var(--terra); color:#fff!important; padding:6px 16px; border-radius:999px; display:inline-block; }
+
+/* 사이드바 */
+.sidebar .widget{ background:var(--paper); border:1px solid var(--sand); border-radius:14px; padding:16px 18px; }
+.sidebar .widget h2{ font-family:'Noto Serif KR',serif; color:var(--terra); border-bottom:2px solid var(--sand); padding-bottom:8px; }
+.footer-outer{ background:var(--sand)!important; color:var(--muted); }
+
+/* ===== 글 안에서 쓰는 컴포넌트 (templates/*.html 에서 사용) ===== */
+.bc-info{ background:var(--paper); border:1px solid var(--sand); border-top:5px solid var(--terra); border-radius:12px; padding:18px 22px; margin:1.5em 0; }
+.bc-info h3{ margin:0 0 10px!important; border:0!important; padding:0!important; color:var(--terra)!important; }
+.bc-info table{ width:100%; border-collapse:collapse; }
+.bc-info th{ width:90px; text-align:left; color:var(--muted); font-weight:500; padding:6px 0; vertical-align:top; }
+.bc-info td{ padding:6px 0; }
+.bc-info tr+tr th,.bc-info tr+tr td{ border-top:1px dashed var(--sand); }
+.bc-stars{ color:var(--terra); letter-spacing:2px; }
+.bc-summary{ background:var(--sand); border-radius:12px; padding:16px 20px; margin:1.5em 0; }
+.bc-summary ul{ margin:0; padding-left:1.2em; }
+.bc-day{ display:inline-block; background:var(--terra); color:#fff; border-radius:999px; padding:2px 14px; font-weight:700; font-size:14px; }
+.bc-tip{ background:#FDF1EC; border:1px solid #F1CFC3; border-radius:10px; padding:12px 16px; margin:1.2em 0; }
+.bc-tip::before{ content:"💡 TIP  "; color:var(--terra); font-weight:700; }
+.bc-photo{ margin:1.5em 0; text-align:center; }
+.bc-photo figcaption{ color:var(--muted); font-size:13px; margin-top:6px; }
+@media(max-width:600px){ .post-outer{ padding:16px; } .bc-info th{ width:70px; } }
